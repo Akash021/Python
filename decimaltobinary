@@ -1,0 +1,16 @@
+def decimalToBinary(inputDecimal):
+    decimal1 = inputDecimal
+    binary = ''
+    while(inputDecimal):
+        if inputDecimal%2==0:
+            binary += '0'
+        else:
+            binary += '1'
+
+        inputDecimal = inputDecimal//2
+
+    binary = "".join(reversed(binary))
+    return binary
+
+
+print(decimalToBinary(25))
