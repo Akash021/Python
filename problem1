@@ -1,0 +1,18 @@
+#You have list of integers.The problem is to return a list where each index has a vlue equal to the product of the remaining integrs in the list.
+list1 = [1,2,3,4]
+#desired output is [24, 12, 8, 6]
+list2 = []
+n = len(list1)
+#use 2 loops to traverse the list1
+for i in range(n):
+    result = 1
+    for j in range(n):
+
+        if j==i:
+            continue
+        else:
+            result = result*list1[j]
+
+
+    list2.append(result)
+print list2
