@@ -1,0 +1,26 @@
+#Move the number of steps as the value of element at that index.Break for Zero.
+
+list1=[1, 2, 2, -1, 1, 3, 1, 2, 1]
+
+
+
+def func1(list2):
+    i = 0
+    while True:
+        steps_remaining = len(list1[i:])-1
+
+        print "steps_remaining : %d"%steps_remaining
+        if list1[i]==0:
+            print "You cannot move forward from here.Zero steps to take..!"
+            break
+        elif list1[i]>steps_remaining:
+            print "Not enough steps left."
+            break
+        else:
+            i = i+list1[i]
+            print "Moving to Index : %d"%i
+            print "Next Element is : %d"%list1[i]
+
+
+
+func1(list1)
