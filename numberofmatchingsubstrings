@@ -1,0 +1,27 @@
+def count_substring(string, sub_string):
+    #current position of index
+    last_index = 0
+    #initial number of matches
+    count = 0
+    #Loop till there so not match(no match returns -1)
+    while last_index!=-1:
+        #find method returns the index of the first matching character from the substring in the string else -1
+        last_index = string.find(sub_string,last_index)
+
+        if last_index!=-1:
+            #increase the count for each match
+            count +=1
+            #now move the index pointer one step forward from the current position
+            last_index +=1
+        else:
+            print "NO matching substrings found..!"
+            break
+    #return the final count of macthes fro the substring in the given string
+    return count
+
+
+string = raw_input("Enter String: ").strip()
+sub_string = raw_input("Enter Substring :").strip()
+
+count = count_substring(string, sub_string)
+print count
