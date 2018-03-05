@@ -1,6 +1,4 @@
-#method to check if a number is a prime number or not
-
-
+import  math
 def isPrime(num):
     if num==0:
         return "Please enter a valid integer"
@@ -10,18 +8,13 @@ def isPrime(num):
         if num%i==0:
             return False
     return True
-    
-    
-#method to find all the factors
 
 def factOFNum(n):
     list1 = []
-    for i in xrange(1,n+1):
+    for i in xrange(1,int(math.sqrt(n))+1):
         if n%i==0:
             list1.append(i)
     return list1
-    
-#method to find the largest prime factor
 
 def largestPrimeFactor(m):
     list2 = []
@@ -32,5 +25,5 @@ def largestPrimeFactor(m):
                 list2.append(ele)
         return max(list2)
 
-#applicable only for a 8 bit integer
-print largestPrimeFactor(25599371)
+
+print largestPrimeFactor(600851475143)
