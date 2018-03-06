@@ -1,0 +1,13 @@
+largestPalindromeProduct = 0
+
+for x in xrange(999,100,-1):
+    for y in xrange(x,100,-1):
+        res = x * y
+
+        if res > largestPalindromeProduct:
+            str1 = str(x * y)
+            if str1 == str1[::-1]:
+                largestPalindromeProduct = x * y
+
+
+print largestPalindromeProduct
