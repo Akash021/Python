@@ -14,7 +14,10 @@ def factOFNum(n):
     for i in xrange(1,int(math.sqrt(n))+1):
         if n%i==0:
             list1.append(i)
+            list1.append(int(n/i))
     return list1
+
+print factOFNum(600851475143)
 
 def largestPrimeFactor(m):
     list2 = []
