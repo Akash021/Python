@@ -1,0 +1,12 @@
+from fractions import gcd
+from functools import reduce
+
+#Note: lcm(a,b) * gcd(a,b) = a*b
+
+def lcm(a,b):
+    return a*b//gcd(a,b)
+
+def find_smallest_multiple():
+    return reduce(lcm,xrange(1,21))
+
+print find_smallest_multiple()
