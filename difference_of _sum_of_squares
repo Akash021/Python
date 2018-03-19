@@ -1,0 +1,9 @@
+n1 = int(raw_input("Enter a natural number :"))
+
+sum_of_squares_of_numbers = (n1*(n1+1)*(2*n1+1))//6
+square_of_sum_of_numbers = ((n1*(n1+1))//2)**2
+
+
+diff = square_of_sum_of_numbers-sum_of_squares_of_numbers
+
+print diff
