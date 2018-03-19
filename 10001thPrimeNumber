@@ -1,0 +1,18 @@
+def isPrime(n):
+    if n < 2: return "Neither prime, nor composite"
+    for i in range(2, int(n ** 0.5) + 1):
+        if n%i==0:
+            return False
+    return True
+
+def findNthPrime(n):
+    noOfPrimes = 0
+    prime = 1
+    while noOfPrimes<n:
+        prime += 1
+        if isPrime(prime):
+            noOfPrimes += 1
+    return prime
+
+
+print findNthPrime(10001)
